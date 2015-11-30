@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MasterTableViewController: UITableViewController {
+class MasterTableViewController: PopUp {
     
     // MARK: Properties & Outlets
         
@@ -16,14 +16,35 @@ class MasterTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        popUpWindow?.hidden = true
         
         let playerOne = Player(name: "Jhoan", rating: 5)
+        let playerTwo = Player(name: "Harold", rating: 5)
+        let playerThree = Player(name: "Daniel", rating: 5)
+        let playerFour = Player(name: "Gustavo", rating: 5)
+        let playerFive = Player(name: "Vicky", rating: 5)
+        let playerSix = Player(name: "Leo", rating: 5)
         players.append(playerOne)
-     
+        players.append(playerTwo)
+        players.append(playerThree)
+        players.append(playerFour)
+        players.append(playerFive)
+        players.append(playerSix)
+        
+        tableView.backgroundView = UIImageView(image: UIImage(named: "Star 3"))
+        
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    
+    @IBAction func addButton(sender: UIBarButtonItem) {
+        if popUpWindow?.hidden != false {
+        ViewFunc()
+        }
     }
 
     // MARK: - Table view data source

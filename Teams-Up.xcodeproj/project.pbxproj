@@ -18,6 +18,7 @@
 		B05656291C097F2500BAA19F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B05656281C097F2500BAA19F /* Main.storyboard */; };
 		B056562B1C0A8A4300BAA19F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056562A1C0A8A4300BAA19F /* Player.swift */; };
 		B056562D1C0A8A9000BAA19F /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056562C1C0A8A9000BAA19F /* Teams.swift */; };
+		B05656391C0BA9EE00BAA19F /* PopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05656381C0BA9EE00BAA19F /* PopUp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		B05656281C097F2500BAA19F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B056562A1C0A8A4300BAA19F /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		B056562C1C0A8A9000BAA19F /* Teams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
+		B05656381C0BA9EE00BAA19F /* PopUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				B05656221C09487C00BAA19F /* TeamTableViewController.swift */,
 				B05656261C094E1700BAA19F /* TeamTableViewCell.swift */,
 				B05656281C097F2500BAA19F /* Main.storyboard */,
+				B05656381C0BA9EE00BAA19F /* PopUp.swift */,
 				B056562A1C0A8A4300BAA19F /* Player.swift */,
 				B056562C1C0A8A9000BAA19F /* Teams.swift */,
 				B05656071C09476C00BAA19F /* Assets.xcassets */,
@@ -214,6 +217,7 @@
 			files = (
 				B056562D1C0A8A9000BAA19F /* Teams.swift in Sources */,
 				B05656251C094D5100BAA19F /* PlayerTableViewCell.swift in Sources */,
+				B05656391C0BA9EE00BAA19F /* PopUp.swift in Sources */,
 				B05656271C094E1700BAA19F /* TeamTableViewCell.swift in Sources */,
 				B05656011C09476C00BAA19F /* AppDelegate.swift in Sources */,
 				B05656211C0947DB00BAA19F /* MasterTableViewController.swift in Sources */,
