@@ -13,6 +13,10 @@ Teams App, is an app that will create two balanced teams from a group of people.
 - Save all teams match up with the ability to save final scores and choose winners
 - Should be able to delete match ups from the list of saved match ups.
 
+
+This project is open to anyone who wants to contribute.
+
+
 # Screenshot
 
 
