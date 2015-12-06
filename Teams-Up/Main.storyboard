@@ -18,11 +18,33 @@
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <color key="separatorColor" red="0.076711381362912001" green="0.31067555759684734" blue="0.63933655104712039" alpha="1" colorSpace="calibratedRGB"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="xHV-To-Nvz">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Players: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1db-Nb-hxW">
+                                    <rect key="frame" x="8" y="5" width="584" height="55"/>
+                                    <animations/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="584" id="ySw-lk-eiy"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="48"/>
+                                    <color key="textColor" red="0.70980392156862748" green="0.70980392156862748" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <animations/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="1db-Nb-hxW" firstAttribute="centerX" secondItem="xHV-To-Nvz" secondAttribute="centerX" id="TK1-wf-7b1"/>
+                                <constraint firstItem="1db-Nb-hxW" firstAttribute="centerY" secondItem="xHV-To-Nvz" secondAttribute="centerY" id="y8A-8r-vYV"/>
+                            </constraints>
+                        </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="main cell" id="wmB-SL-0jg" customClass="PlayerTableViewCell" customModule="Teams_Up" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="49.5" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="main cell" id="wmB-SL-0jg" customClass="PlayerTableViewCell" customModule="Teams_Up" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="114.5" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wmB-SL-0jg" id="8dZ-QZ-KBD">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -37,10 +59,10 @@
                                         </label>
                                     </subviews>
                                     <animations/>
-                                    <color key="backgroundColor" red="0.99248915812284322" green="0.98377472526757026" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                    <color key="backgroundColor" red="0.98947368421052628" green="0.97894736842105268" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 </tableViewCellContentView>
                                 <animations/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.12536015070921985" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.050000000000000003" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="playerNameLabel" destination="z6L-bm-qd1" id="z62-we-lfO"/>
                                 </connections>
@@ -59,10 +81,14 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Teams" id="KcI-UW-nGZ">
                             <connections>
+                                <action selector="teamsButton:" destination="nt1-mU-lLH" id="L1i-Ax-u5P"/>
                                 <segue destination="Gcr-QV-s0g" kind="show" id="YTQ-oM-rni"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="headerLabel" destination="1db-Nb-hxW" id="kk8-hW-rPK"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oAl-mS-nGs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
