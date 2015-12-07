@@ -11,9 +11,9 @@ import Foundation
 
 class Player{
     let name: String
-    let rating: Int
+    let rating: Double
     
-    init(name: String, rating: Int){
+    init(name: String, rating: Double){
         self.name = name
         self.rating = rating
     }

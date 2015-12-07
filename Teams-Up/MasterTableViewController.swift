@@ -61,6 +61,7 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
 
         let player = players[indexPath.row]
         cell.playerNameLabel.text = player.name
+        cell.starRating.rating = player.rating
         return cell
     }
     
@@ -113,12 +114,12 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
     
     // MARK: - POPUP WINDOW
     var popView: UIView!
+    @IBOutlet weak var starRating: CosmosView!
     
     
     @IBAction func popViewAddButton(sender: UIButton) {
-        
         if popViewTextField.text != ""{
-            let player = Player(name: popViewTextField.text!, rating: 0)
+            let player = Player(name: popViewTextField.text!, rating: self.starRating.rating)
             players.append(player)
             tableView.reloadData()
             popViewTextField.text = ""

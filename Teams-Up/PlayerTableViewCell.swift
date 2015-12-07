@@ -13,6 +13,7 @@ class PlayerTableViewCell: UITableViewCell {
     // MARK: Properties & Outlets
 
     @IBOutlet weak var playerNameLabel: UILabel!
+    @IBOutlet weak var starRating: CosmosView!
     
     
     override func awakeFromNib() {

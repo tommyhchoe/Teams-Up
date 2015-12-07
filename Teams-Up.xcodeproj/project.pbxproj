@@ -19,6 +19,7 @@
 		B056562B1C0A8A4300BAA19F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056562A1C0A8A4300BAA19F /* Player.swift */; };
 		B056562D1C0A8A9000BAA19F /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056562C1C0A8A9000BAA19F /* Teams.swift */; };
 		B056566D1C11268400BAA19F /* PopupWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B056566C1C11268400BAA19F /* PopupWindow.xib */; };
+		B08659FD1C157C5300E00B10 /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08659FC1C157C5300E00B10 /* CosmosDistrib.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		B056562A1C0A8A4300BAA19F /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		B056562C1C0A8A9000BAA19F /* Teams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
 		B056566C1C11268400BAA19F /* PopupWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PopupWindow.xib; path = ../PopupWindow.xib; sourceTree = "<group>"; };
+		B08659FC1C157C5300E00B10 /* CosmosDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				B05656281C097F2500BAA19F /* Main.storyboard */,
 				B056562A1C0A8A4300BAA19F /* Player.swift */,
 				B056562C1C0A8A9000BAA19F /* Teams.swift */,
+				B08659FC1C157C5300E00B10 /* CosmosDistrib.swift */,
 				B05656071C09476C00BAA19F /* Assets.xcassets */,
 				B056566C1C11268400BAA19F /* PopupWindow.xib */,
 				B05656091C09476C00BAA19F /* LaunchScreen.storyboard */,
@@ -219,6 +222,7 @@
 				B056562D1C0A8A9000BAA19F /* Teams.swift in Sources */,
 				B05656251C094D5100BAA19F /* PlayerTableViewCell.swift in Sources */,
 				B05656271C094E1700BAA19F /* TeamTableViewCell.swift in Sources */,
+				B08659FD1C157C5300E00B10 /* CosmosDistrib.swift in Sources */,
 				B05656011C09476C00BAA19F /* AppDelegate.swift in Sources */,
 				B05656211C0947DB00BAA19F /* MasterTableViewController.swift in Sources */,
 				B056562B1C0A8A4300BAA19F /* Player.swift in Sources */,
