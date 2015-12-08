@@ -1,5 +1,9 @@
 # Teams-Up
 
+If you are learning Swift, and came across this project, you can join us in a Slack group where we can communicate and talk about the project and other upcoming practice apps. These apps will be live at the app store once they are completed. 
+
+If you are interested in joining, you can send me an e-mail to jhoannarango@msn.com. 
+
 ##Description and Features of the app
 
 ###Description
