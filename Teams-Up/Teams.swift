@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Team {
+class Teams {
     let team: String
     let player: [Player]
     

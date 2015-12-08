@@ -18,14 +18,14 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         /// Setting the background image.
         tableView.backgroundView = UIImageView(image: UIImage(named: "Star 3"))
         
-        /// Loading the Nib View
+        /// Calling the method that loads the Nib
         xibSetup()
         popViewTextField.delegate = self
         
+        /// Calling the method that updates the header.
         updateHeader()
     }
 
@@ -73,8 +73,6 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
     }
 
     
-
-    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
@@ -112,7 +110,11 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
     }
     */
     
+    //////////////////////////////////////////////////// POP UP WINDOW ///////////////////////////////////////////////////////////
+    
     // MARK: - POPUP WINDOW
+    
+    /// Properties & Outlets
     var popView: UIView!
     @IBOutlet weak var starRating: CosmosView!
     
