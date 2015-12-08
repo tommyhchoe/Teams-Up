@@ -11,11 +11,12 @@ Teams App, is an app that will create two balanced teams from a group of people.
 - Give players a rating of stars from 1 - 5 depending on individual skills, and also be able to modify the rating.
 - Display the two teams created. 
 - Save all teams match up with the ability to save final scores and choose winners
-- Should be able to delete match ups from the list of saved match ups.
 
 
-This project is open to anyone who wants to contribute.
 
+###This project is open to anyone who wants to contribute.
+
+Visual aspects of the app, can be modified. 
 
 # Screenshot
 
