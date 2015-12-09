@@ -20,7 +20,14 @@ These are the features that we want to add to this app.
 - Give players a rating of stars from 1 - 5 depending on individual skills, and also be able to modify the rating.
 - Display the two teams created. 
 
+##Current progress! 
+-------
 
+The app is under progress, and so far it has just the first parts done. Right now, you can only add the names of the players, but it won't make the teams. 
+
+All the visuals of the app are in a folder called "graphics" and they are under a sketch file. Follow the screenshot of the app, to have a guide for what the final app should look like. 
+
+------
 
 
 ###This project is open to anyone who wants to contribute.
