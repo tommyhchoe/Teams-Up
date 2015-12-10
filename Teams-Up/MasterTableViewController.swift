@@ -12,6 +12,9 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
     
     // MARK: Properties & Outlets
     var players = [Player]()
+    var teamA = [Player]()
+    var teamB = [Player]()
+    var sortedGroup = [AnyObject]()
 
     @IBOutlet weak var popViewTextField: UITextField!
     @IBOutlet weak var headerLabel: UILabel!
@@ -100,15 +103,38 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "teams" {
+            let teamTableViewController = segue.destinationViewController as! TeamTableViewController
+            
+            let sortedGroup = players.sort { (player: Player, player2: Player) -> Bool in
+                let player = player.rating < player2.rating
+                return player
+            }
+            /// Assigning each player to a team
+            for player in sortedGroup {
+                if sortedGroup.count > 0 {
+                    if teamA.count >= teamB.count {
+                        teamB.append(player)
+                    } else if teamB.count >= teamA.count {
+                        teamA.append(player)
+                    }
+                }
+            }
+            
+            let team1 = Teams(team: "Team 1", player: teamA)
+            let team2 = Teams(team: "Team 2", player: teamB)
+           
+            teamTableViewController.teams += [team1, team2]
+
+        }
+
     }
-    */
+
     
     //////////////////////////////////////////////////// POP UP WINDOW ///////////////////////////////////////////////////////////
     
@@ -158,7 +184,7 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
     func loadViewFromNib() -> UIView {
         let bundle = NSBundle(forClass: self.dynamicType)
         let nib = UINib(nibName: "PopupWindow", bundle: bundle)
-       let popView = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
+        let popView = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
         
         return popView
     }
