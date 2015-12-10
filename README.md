@@ -23,7 +23,7 @@ These are the features that we want to add to this app.
 ##Current progress! 
 -------
 
-The app is under progress, and so far it has just the first parts done. Right now, you can only add the names of the players, but it won't make the teams. 
+12/10/15 The app its on its final stages, small visual details are left to be worked on. 
 
 All the visuals of the app are in a folder called "graphics" and they are under a sketch file. Follow the screenshot of the app, to have a guide for what the final app should look like. 
 
