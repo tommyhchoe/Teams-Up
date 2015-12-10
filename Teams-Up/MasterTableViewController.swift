@@ -86,23 +86,6 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
     
     // MARK: - Navigation
 
@@ -111,6 +94,7 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
         if segue.identifier == "teams" {
             let teamTableViewController = segue.destinationViewController as! TeamTableViewController
             
+            /// This sorts the players in order from high to low
             let sortedGroup = players.sort { (player: Player, player2: Player) -> Bool in
                 let player = player.rating < player2.rating
                 return player
@@ -126,6 +110,7 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
                 }
             }
             
+            /// Creating the instances of Teams to be sent to the TeamTableViewController, with players in them.
             let team1 = Teams(team: "Team 1", player: teamA)
             let team2 = Teams(team: "Team 2", player: teamB)
            
