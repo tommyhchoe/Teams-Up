@@ -9,6 +9,8 @@
 import UIKit
 
 class TeamTableViewController: UITableViewController {
+    
+    var teams = [Teams]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,24 +32,31 @@ class TeamTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return teams.count
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        let team = teams[section]
+        let players = team.player.count
+        return players
     }
 
-    /*
+    /// Title for the Section
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "\(teams[section].team)"
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("team cell", forIndexPath: indexPath) as! TeamTableViewCell
 
-        // Configure the cell...
-
+        let team = teams[indexPath.section]
+        let player = team.player[indexPath.row]
+        let name = player.name
+        
+        cell.teamPlayerLabel.text = name
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

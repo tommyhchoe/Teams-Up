@@ -12,20 +12,23 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
     
     // MARK: Properties & Outlets
     var players = [Player]()
+    var teamA = [Player]()
+    var teamB = [Player]()
+    var sortedGroup = [AnyObject]()
 
     @IBOutlet weak var popViewTextField: UITextField!
     @IBOutlet weak var headerLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         /// Setting the background image.
         tableView.backgroundView = UIImageView(image: UIImage(named: "Star 3"))
         
-        /// Loading the Nib View
+        /// Calling the method that loads the Nib
         xibSetup()
         popViewTextField.delegate = self
         
+        /// Calling the method that updates the header.
         updateHeader()
     }
 
@@ -61,6 +64,7 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
 
         let player = players[indexPath.row]
         cell.playerNameLabel.text = player.name
+        cell.starRating.rating = player.rating
         return cell
     }
     
@@ -70,8 +74,6 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-
-    
 
     
     // Override to support editing the table view.
@@ -101,24 +103,51 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "teams" {
+            let teamTableViewController = segue.destinationViewController as! TeamTableViewController
+            
+            let sortedGroup = players.sort { (player: Player, player2: Player) -> Bool in
+                let player = player.rating < player2.rating
+                return player
+            }
+            /// Assigning each player to a team
+            for player in sortedGroup {
+                if sortedGroup.count > 0 {
+                    if teamA.count >= teamB.count {
+                        teamB.append(player)
+                    } else if teamB.count >= teamA.count {
+                        teamA.append(player)
+                    }
+                }
+            }
+            
+            let team1 = Teams(team: "Team 1", player: teamA)
+            let team2 = Teams(team: "Team 2", player: teamB)
+           
+            teamTableViewController.teams += [team1, team2]
+
+        }
+
     }
-    */
+
+    
+    //////////////////////////////////////////////////// POP UP WINDOW ///////////////////////////////////////////////////////////
     
     // MARK: - POPUP WINDOW
+    
+    /// Properties & Outlets
     var popView: UIView!
+    @IBOutlet weak var starRating: CosmosView!
     
     
     @IBAction func popViewAddButton(sender: UIButton) {
-        
         if popViewTextField.text != ""{
-            let player = Player(name: popViewTextField.text!, rating: 0)
+            let player = Player(name: popViewTextField.text!, rating: self.starRating.rating)
             players.append(player)
             tableView.reloadData()
             popViewTextField.text = ""
@@ -155,7 +184,7 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
     func loadViewFromNib() -> UIView {
         let bundle = NSBundle(forClass: self.dynamicType)
         let nib = UINib(nibName: "PopupWindow", bundle: bundle)
-       let popView = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
+        let popView = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
         
         return popView
     }
