@@ -12,20 +12,31 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
     
     // MARK: Properties & Outlets
     var players = [Player]()
+    var teamA = [Player]()
+    var teamB = [Player]()
+    var sortedGroup = [AnyObject]()
 
     @IBOutlet weak var popViewTextField: UITextField!
     @IBOutlet weak var headerLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         /// Setting the background image.
-        tableView.backgroundView = UIImageView(image: UIImage(named: "Star 3"))
+        tableView.backgroundColor = UIColor.blackColor()
         
-        /// Loading the Nib View
+        let player = Player(name: "Jose", rating: 3.0)
+        let player2 = Player(name: "Jhoan", rating: 5.0)
+        let player3 = Player(name: "Carlos", rating: 2.0)
+        let player4 = Player(name: "Edgar", rating: 1.0)
+        let player5 = Player(name: "Jose", rating: 3.0)
+        let player6 = Player(name: "Frank", rating: 4.0)
+        
+        players += [player, player2, player3, player4, player5, player6]
+        /// Calling the method that loads the Nib
         xibSetup()
         popViewTextField.delegate = self
         
+        /// Calling the method that updates the header.
         updateHeader()
     }
 
@@ -73,8 +84,6 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
     }
 
     
-
-    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
@@ -85,34 +94,46 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "teams" {
+            let teamTableViewController = segue.destinationViewController as! TeamTableViewController
+            
+            /// This sorts the players in order from high to low
+            let sortedGroup = players.sort { (player: Player, player2: Player) -> Bool in
+                let player = player.rating < player2.rating
+                return player
+            }
+            /// Assigning each player to a team
+            for player in sortedGroup {
+                if sortedGroup.count > 0 {
+                    if teamA.count >= teamB.count {
+                        teamB.append(player)
+                    } else if teamB.count >= teamA.count {
+                        teamA.append(player)
+                    }
+                }
+            }
+            
+            /// Creating the instances of Teams to be sent to the TeamTableViewController, with players in them.
+            let team1 = Teams(team: "Team 1", player: teamA)
+            let team2 = Teams(team: "Team 2", player: teamB)
+           
+            teamTableViewController.teams += [team1, team2]
+
+        }
+
     }
-    */
+
+    
+    //////////////////////////////////////////////////// POP UP WINDOW ///////////////////////////////////////////////////////////
     
     // MARK: - POPUP WINDOW
+    
+    /// Properties & Outlets
     var popView: UIView!
     @IBOutlet weak var starRating: CosmosView!
     
@@ -156,7 +177,7 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
     func loadViewFromNib() -> UIView {
         let bundle = NSBundle(forClass: self.dynamicType)
         let nib = UINib(nibName: "PopupWindow", bundle: bundle)
-       let popView = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
+        let popView = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
         
         return popView
     }
