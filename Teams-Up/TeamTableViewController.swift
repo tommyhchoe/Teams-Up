@@ -53,6 +53,7 @@ class TeamTableViewController: UITableViewController {
         let player = team.player[indexPath.row]
         let name = player.name
         
+        
         cell.teamPlayerLabel.text = name
         return cell
     }
