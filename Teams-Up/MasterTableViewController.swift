@@ -24,14 +24,17 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
         /// Setting the background image.
         tableView.backgroundColor = UIColor.blackColor()
         
-        let player = Player(name: "Jose", rating: 3.0)
+        /// Test players
+        
+        let player = Player(name: "Juan", rating: 3.0)
         let player2 = Player(name: "Jhoan", rating: 5.0)
         let player3 = Player(name: "Carlos", rating: 2.0)
-        let player4 = Player(name: "Edgar", rating: 1.0)
-        let player5 = Player(name: "Jose", rating: 3.0)
+        let player4 = Player(name: "Mike", rating: 1.0)
+        let player5 = Player(name: "Mark", rating: 3.0)
         let player6 = Player(name: "Frank", rating: 4.0)
         
         players += [player, player2, player3, player4, player5, player6]
+        
         /// Calling the method that loads the Nib
         xibSetup()
         popViewTextField.delegate = self
@@ -68,7 +71,7 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("main cell", forIndexPath: indexPath) as! PlayerTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("player cell", forIndexPath: indexPath) as! PlayerTableViewCell
 
         let player = players[indexPath.row]
         cell.playerNameLabel.text = player.name
