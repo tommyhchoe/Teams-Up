@@ -58,6 +58,27 @@ class TeamTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        
+        if section >= 1 {
+            return nil
+        }
+        
+        let footerView = UIView(frame: CGRectMake(0, 0, tableView.frame.size.width, 40))
+        
+        let image = UIImage(named: "VS-Logo")
+        
+        let imageView = UIImageView(image: image)
+        imageView.frame = CGRectMake(footerView.center.x - 35, footerView.center.y, 70, 70)
+        
+        footerView.addSubview(imageView)
+        
+        return footerView
+    }
+    
+    override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 80.0
+    }
 
     /*
     // Override to support conditional editing of the table view.

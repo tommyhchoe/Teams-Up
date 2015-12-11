@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9bB-4G-5Db">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9bB-4G-5Db">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -18,6 +18,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="tod-hg-bO4">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="separatorColor" red="0.076711381362912001" green="0.31067555759684734" blue="0.63933655104712039" alpha="1" colorSpace="calibratedRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="xHV-To-Nvz">
@@ -26,6 +27,7 @@
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Players: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1db-Nb-hxW">
                                     <rect key="frame" x="8" y="5" width="584" height="55"/>
+                                    <animations/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="584" id="ySw-lk-eiy"/>
                                     </constraints>
@@ -34,6 +36,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
+                            <animations/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstItem="1db-Nb-hxW" firstAttribute="centerX" secondItem="xHV-To-Nvz" secondAttribute="centerX" id="TK1-wf-7b1"/>
@@ -42,20 +45,22 @@
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="main cell" id="wmB-SL-0jg" customClass="PlayerTableViewCell" customModule="Teams_Up" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="114.5" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="115" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wmB-SL-0jg" id="8dZ-QZ-KBD">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6L-bm-qd1">
                                             <rect key="frame" x="8" y="11" width="229" height="21"/>
+                                            <animations/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kx5-HZ-Z1V" customClass="CosmosView" customModule="Teams_Up" customModuleProvider="target">
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kx5-HZ-Z1V" customClass="CosmosView" customModule="Teams_Up" customModuleProvider="target">
                                             <rect key="frame" x="435" y="9" width="151" height="26"/>
+                                            <animations/>
                                             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="151" id="SLz-8L-bwD"/>
@@ -80,12 +85,14 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
+                                    <animations/>
                                     <color key="backgroundColor" red="0.98947368421052628" green="0.97894736842105268" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="trailingMargin" secondItem="Kx5-HZ-Z1V" secondAttribute="trailing" constant="6" id="FNG-VV-5qI"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Kx5-HZ-Z1V" secondAttribute="bottom" constant="1" id="wxH-J5-HEY"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.050000000000000003" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="playerNameLabel" destination="z6L-bm-qd1" id="z62-we-lfO"/>
@@ -123,34 +130,39 @@
         <scene sceneID="noH-PK-rbj">
             <objects>
                 <tableViewController id="Gcr-QV-s0g" customClass="TeamTableViewController" customModule="Teams_Up" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="2Yp-qZ-NOl">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="2Yp-qZ-NOl">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="team cell" id="TUS-39-Bjh" customClass="TeamTableViewCell" customModule="Teams_Up" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="49.5" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="50" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TUS-39-Bjh" id="LK1-i1-B3Q">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Players Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXf-dv-rXY">
                                             <rect key="frame" x="113" y="11" width="375" height="21"/>
+                                            <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="375" id="haI-V7-1pH"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <animations/>
                                     <constraints>
                                         <constraint firstItem="XXf-dv-rXY" firstAttribute="top" secondItem="LK1-i1-B3Q" secondAttribute="topMargin" constant="3" id="7Xg-g1-ci7"/>
                                         <constraint firstItem="XXf-dv-rXY" firstAttribute="centerY" secondItem="LK1-i1-B3Q" secondAttribute="centerY" id="LbL-3k-aj7"/>
                                         <constraint firstItem="XXf-dv-rXY" firstAttribute="centerX" secondItem="LK1-i1-B3Q" secondAttribute="centerX" id="Ri0-9M-D2t"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="teamPlayerLabel" destination="XXf-dv-rXY" id="Fvp-qE-uvG"/>
                                 </connections>
@@ -175,6 +187,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Bcg-J6-ONp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <textAttributes key="titleTextAttributes">
