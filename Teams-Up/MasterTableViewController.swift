@@ -22,8 +22,16 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         /// Setting the background image.
-        tableView.backgroundView = UIImageView(image: UIImage(named: "Star 3"))
+        tableView.backgroundColor = UIColor.blackColor()
         
+        let player = Player(name: "Jose", rating: 3.0)
+        let player2 = Player(name: "Jhoan", rating: 5.0)
+        let player3 = Player(name: "Carlos", rating: 2.0)
+        let player4 = Player(name: "Edgar", rating: 1.0)
+        let player5 = Player(name: "Jose", rating: 3.0)
+        let player6 = Player(name: "Frank", rating: 4.0)
+        
+        players += [player, player2, player3, player4, player5, player6]
         /// Calling the method that loads the Nib
         xibSetup()
         popViewTextField.delegate = self
