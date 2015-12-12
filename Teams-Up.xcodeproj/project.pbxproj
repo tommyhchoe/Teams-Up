@@ -11,14 +11,12 @@
 		B05656081C09476C00BAA19F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B05656071C09476C00BAA19F /* Assets.xcassets */; };
 		B056560B1C09476C00BAA19F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B05656091C09476C00BAA19F /* LaunchScreen.storyboard */; };
 		B05656161C09476C00BAA19F /* Teams_UpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05656151C09476C00BAA19F /* Teams_UpTests.swift */; };
-		B05656211C0947DB00BAA19F /* MasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05656201C0947DB00BAA19F /* MasterTableViewController.swift */; };
 		B05656231C09487C00BAA19F /* TeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05656221C09487C00BAA19F /* TeamTableViewController.swift */; };
 		B05656251C094D5100BAA19F /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05656241C094D5100BAA19F /* PlayerTableViewCell.swift */; };
 		B05656271C094E1700BAA19F /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05656261C094E1700BAA19F /* TeamTableViewCell.swift */; };
 		B05656291C097F2500BAA19F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B05656281C097F2500BAA19F /* Main.storyboard */; };
 		B056562B1C0A8A4300BAA19F /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056562A1C0A8A4300BAA19F /* Player.swift */; };
 		B056562D1C0A8A9000BAA19F /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056562C1C0A8A9000BAA19F /* Teams.swift */; };
-		B056566D1C11268400BAA19F /* PopupWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B056566C1C11268400BAA19F /* PopupWindow.xib */; };
 		B08659FD1C157C5300E00B10 /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08659FC1C157C5300E00B10 /* CosmosDistrib.swift */; };
 		C73C3ED21C1B599C0035B9C3 /* PlayersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C3ED11C1B599C0035B9C3 /* PlayersDataSource.swift */; };
 		C73C3ED41C1B69560035B9C3 /* PlayersDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C3ED31C1B69560035B9C3 /* PlayersDataSourceTests.swift */; };
@@ -27,6 +25,9 @@
 		C753C4E71C1B7F07001DD0CC /* FakeUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C753C4E51C1B78BD001DD0CC /* FakeUserDefaults.swift */; };
 		C775909E1C17128700126197 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = C775909D1C17128700126197 /* Podfile */; };
 		C78B030A1C1B842800F9AC93 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056562A1C0A8A4300BAA19F /* Player.swift */; };
+		C79D7CF51C1C6DF3003D654A /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79D7CF31C1C6DF3003D654A /* PopUpViewController.swift */; };
+		C79D7CF61C1C6DF3003D654A /* PopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C79D7CF41C1C6DF3003D654A /* PopUpViewController.xib */; };
+		C79D7CFA1C1C862B003D654A /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79D7CF91C1C862B003D654A /* PlayersViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,19 +49,20 @@
 		B05656111C09476C00BAA19F /* Teams-UpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Teams-UpTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B05656151C09476C00BAA19F /* Teams_UpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teams_UpTests.swift; sourceTree = "<group>"; };
 		B05656171C09476C00BAA19F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B05656201C0947DB00BAA19F /* MasterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterTableViewController.swift; sourceTree = "<group>"; };
 		B05656221C09487C00BAA19F /* TeamTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTableViewController.swift; sourceTree = "<group>"; };
 		B05656241C094D5100BAA19F /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 		B05656261C094E1700BAA19F /* TeamTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
 		B05656281C097F2500BAA19F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B056562A1C0A8A4300BAA19F /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		B056562C1C0A8A9000BAA19F /* Teams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
-		B056566C1C11268400BAA19F /* PopupWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PopupWindow.xib; path = ../PopupWindow.xib; sourceTree = "<group>"; };
 		B08659FC1C157C5300E00B10 /* CosmosDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
 		C73C3ED11C1B599C0035B9C3 /* PlayersDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersDataSource.swift; sourceTree = "<group>"; };
 		C73C3ED31C1B69560035B9C3 /* PlayersDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersDataSourceTests.swift; sourceTree = "<group>"; };
 		C753C4E51C1B78BD001DD0CC /* FakeUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeUserDefaults.swift; sourceTree = "<group>"; };
 		C775909D1C17128700126197 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		C79D7CF31C1C6DF3003D654A /* PopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		C79D7CF41C1C6DF3003D654A /* PopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpViewController.xib; sourceTree = "<group>"; };
+		C79D7CF91C1C862B003D654A /* PlayersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,18 +105,19 @@
 		B05655FF1C09476C00BAA19F /* Teams-Up */ = {
 			isa = PBXGroup;
 			children = (
+				B056562A1C0A8A4300BAA19F /* Player.swift */,
+				B056562C1C0A8A9000BAA19F /* Teams.swift */,
 				B05656001C09476C00BAA19F /* AppDelegate.swift */,
-				B05656201C0947DB00BAA19F /* MasterTableViewController.swift */,
 				B05656241C094D5100BAA19F /* PlayerTableViewCell.swift */,
 				B05656221C09487C00BAA19F /* TeamTableViewController.swift */,
 				B05656261C094E1700BAA19F /* TeamTableViewCell.swift */,
 				B05656281C097F2500BAA19F /* Main.storyboard */,
-				B056562A1C0A8A4300BAA19F /* Player.swift */,
+				C79D7CF91C1C862B003D654A /* PlayersViewController.swift */,
 				C73C3ED11C1B599C0035B9C3 /* PlayersDataSource.swift */,
-				B056562C1C0A8A9000BAA19F /* Teams.swift */,
+				C79D7CF31C1C6DF3003D654A /* PopUpViewController.swift */,
+				C79D7CF41C1C6DF3003D654A /* PopUpViewController.xib */,
 				B08659FC1C157C5300E00B10 /* CosmosDistrib.swift */,
 				B05656071C09476C00BAA19F /* Assets.xcassets */,
-				B056566C1C11268400BAA19F /* PopupWindow.xib */,
 				B05656091C09476C00BAA19F /* LaunchScreen.storyboard */,
 				B056560C1C09476C00BAA19F /* Info.plist */,
 			);
@@ -215,10 +218,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C775909E1C17128700126197 /* Podfile in Resources */,
-				B056566D1C11268400BAA19F /* PopupWindow.xib in Resources */,
 				B05656291C097F2500BAA19F /* Main.storyboard in Resources */,
 				B056560B1C09476C00BAA19F /* LaunchScreen.storyboard in Resources */,
 				B05656081C09476C00BAA19F /* Assets.xcassets in Resources */,
+				C79D7CF61C1C6DF3003D654A /* PopUpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,14 +239,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C79D7CFA1C1C862B003D654A /* PlayersViewController.swift in Sources */,
 				B056562D1C0A8A9000BAA19F /* Teams.swift in Sources */,
 				B05656251C094D5100BAA19F /* PlayerTableViewCell.swift in Sources */,
 				B05656271C094E1700BAA19F /* TeamTableViewCell.swift in Sources */,
+				C79D7CF51C1C6DF3003D654A /* PopUpViewController.swift in Sources */,
 				B08659FD1C157C5300E00B10 /* CosmosDistrib.swift in Sources */,
 				C73C3ED21C1B599C0035B9C3 /* PlayersDataSource.swift in Sources */,
 				C753C4E71C1B7F07001DD0CC /* FakeUserDefaults.swift in Sources */,
 				B05656011C09476C00BAA19F /* AppDelegate.swift in Sources */,
-				B05656211C0947DB00BAA19F /* MasterTableViewController.swift in Sources */,
 				B056562B1C0A8A4300BAA19F /* Player.swift in Sources */,
 				B05656231C09487C00BAA19F /* TeamTableViewController.swift in Sources */,
 			);
