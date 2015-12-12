@@ -21,13 +21,6 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-<<<<<<< HEAD
-
-=======
-        /// Setting the background image.
-        tableView.backgroundColor = UIColor.blackColor()
-        
->>>>>>> origin/my-develop-branch
         /// Calling the method that loads the Nib
         xibSetup()
         popViewTextField.delegate = self
@@ -50,19 +43,15 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     func updateHeader(){
-<<<<<<< HEAD
-        if players.count == 0 {
+        if playersDataSource.numberOfRows == 0 {
             headerLabel.alpha = 0
             tableView.backgroundView = UIImageView(image: UIImage(named: "Background Empty"))
         } else {
             headerLabel.alpha = 1.0
-            headerLabel.text = "Players: \(players.count)"
+            headerLabel.text = "Players: \(playersDataSource.numberOfRows)"
             tableView.backgroundView = nil
             tableView.backgroundColor = UIColor.blackColor()
         }
-=======
-        headerLabel.text = "Players: \(playersDataSource.numberOfRows)"
->>>>>>> origin/my-develop-branch
     }
 
     // MARK: - Table view data source
@@ -120,13 +109,13 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
         if segue.identifier == "teams" {
             let teamTableViewController = segue.destinationViewController as! TeamTableViewController
             
-            /// This sorts the players in order from high to low
+            /// Step 1: This sorts the players in order from high to low
             let players = playersDataSource.players
             let sortedGroup = players.sort { (player: Player, player2: Player) -> Bool in
                 let player = player.rating < player2.rating
                 return player
             }
-            /// Assigning each player to a team
+            /// Step 2: Assigning each player to a team
             for player in sortedGroup {
                 if sortedGroup.count > 0 {
                     if teamA.count >= teamB.count {
@@ -137,7 +126,7 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
                 }
             }
             
-            /// Creating the instances of Teams to be sent to the TeamTableViewController, with players in them.
+            /// Step 3: Creating the instances of Teams to be sent to the TeamTableViewController, with players in them.
             let team1 = Teams(team: "Team 1", player: teamA)
             let team2 = Teams(team: "Team 2", player: teamB)
            
