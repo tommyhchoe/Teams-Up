@@ -11,7 +11,7 @@ import UIKit
 class MasterTableViewController: UITableViewController, UITextFieldDelegate {
     
     // MARK: Properties & Outlets
-    var players = [Player]()
+    let playersDataSource = PlayersDataSource()
     var teamA = [Player]()
     var teamB = [Player]()
     var sortedGroup = [AnyObject]()
@@ -21,7 +21,13 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
 
+=======
+        /// Setting the background image.
+        tableView.backgroundColor = UIColor.blackColor()
+        
+>>>>>>> origin/my-develop-branch
         /// Calling the method that loads the Nib
         xibSetup()
         popViewTextField.delegate = self
@@ -44,6 +50,7 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     func updateHeader(){
+<<<<<<< HEAD
         if players.count == 0 {
             headerLabel.alpha = 0
             tableView.backgroundView = UIImageView(image: UIImage(named: "Background Empty"))
@@ -53,23 +60,30 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
             tableView.backgroundView = nil
             tableView.backgroundColor = UIColor.blackColor()
         }
+=======
+        headerLabel.text = "Players: \(playersDataSource.numberOfRows)"
+>>>>>>> origin/my-develop-branch
     }
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return playersDataSource.numberOfSections
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return players.count
+        return playersDataSource.numberOfRows
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("player cell", forIndexPath: indexPath) as! PlayerTableViewCell
 
-        let player = players[indexPath.row]
+        
+        guard let player = playersDataSource.playerAtIndexPath(indexPath) else {
+            return cell
+        }
+        
         cell.playerNameLabel.text = player.name
         cell.starRating.rating = player.rating
         return cell
@@ -86,9 +100,14 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == .Delete {
-            players.removeAtIndex(indexPath.row)
-            updateHeader()
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            
+            if let _ = playersDataSource.removePlayerAtIndexPath(indexPath) {
+                updateHeader()
+                tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
+            } else {
+                // TODO: Player could not be removed, display an error message
+            }
+            
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
@@ -102,6 +121,7 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
             let teamTableViewController = segue.destinationViewController as! TeamTableViewController
             
             /// This sorts the players in order from high to low
+            let players = playersDataSource.players
             let sortedGroup = players.sort { (player: Player, player2: Player) -> Bool in
                 let player = player.rating < player2.rating
                 return player
@@ -124,7 +144,6 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
             teamTableViewController.teams += [team1, team2]
 
         }
-
     }
     
     /// Removes the teams created, so that it will not double the teams on the TeamsTableViewController
@@ -145,8 +164,7 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
     
     @IBAction func popViewAddButton(sender: UIButton) {
         if popViewTextField.text != ""{
-            let player = Player(name: popViewTextField.text!, rating: self.starRating.rating)
-            players.append(player)
+            playersDataSource.addPlayer(name: popViewTextField.text!, rating: self.starRating.rating)
             tableView.reloadData()
             popViewTextField.text = ""
             updateHeader()
