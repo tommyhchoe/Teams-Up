@@ -20,6 +20,13 @@
 		B056562D1C0A8A9000BAA19F /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056562C1C0A8A9000BAA19F /* Teams.swift */; };
 		B056566D1C11268400BAA19F /* PopupWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B056566C1C11268400BAA19F /* PopupWindow.xib */; };
 		B08659FD1C157C5300E00B10 /* CosmosDistrib.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08659FC1C157C5300E00B10 /* CosmosDistrib.swift */; };
+		C73C3ED21C1B599C0035B9C3 /* PlayersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C3ED11C1B599C0035B9C3 /* PlayersDataSource.swift */; };
+		C73C3ED41C1B69560035B9C3 /* PlayersDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C3ED31C1B69560035B9C3 /* PlayersDataSourceTests.swift */; };
+		C73C3ED51C1B697A0035B9C3 /* PlayersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C3ED11C1B599C0035B9C3 /* PlayersDataSource.swift */; };
+		C753C4E61C1B78BD001DD0CC /* FakeUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C753C4E51C1B78BD001DD0CC /* FakeUserDefaults.swift */; };
+		C753C4E71C1B7F07001DD0CC /* FakeUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C753C4E51C1B78BD001DD0CC /* FakeUserDefaults.swift */; };
+		C775909E1C17128700126197 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = C775909D1C17128700126197 /* Podfile */; };
+		C78B030A1C1B842800F9AC93 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B056562A1C0A8A4300BAA19F /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +57,10 @@
 		B056562C1C0A8A9000BAA19F /* Teams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
 		B056566C1C11268400BAA19F /* PopupWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PopupWindow.xib; path = ../PopupWindow.xib; sourceTree = "<group>"; };
 		B08659FC1C157C5300E00B10 /* CosmosDistrib.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CosmosDistrib.swift; sourceTree = "<group>"; };
+		C73C3ED11C1B599C0035B9C3 /* PlayersDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersDataSource.swift; sourceTree = "<group>"; };
+		C73C3ED31C1B69560035B9C3 /* PlayersDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayersDataSourceTests.swift; sourceTree = "<group>"; };
+		C753C4E51C1B78BD001DD0CC /* FakeUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeUserDefaults.swift; sourceTree = "<group>"; };
+		C775909D1C17128700126197 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +84,7 @@
 		B05655F41C09476C00BAA19F = {
 			isa = PBXGroup;
 			children = (
+				C775909D1C17128700126197 /* Podfile */,
 				B05655FF1C09476C00BAA19F /* Teams-Up */,
 				B05656141C09476C00BAA19F /* Teams-UpTests */,
 				B05655FE1C09476C00BAA19F /* Products */,
@@ -98,6 +110,7 @@
 				B05656261C094E1700BAA19F /* TeamTableViewCell.swift */,
 				B05656281C097F2500BAA19F /* Main.storyboard */,
 				B056562A1C0A8A4300BAA19F /* Player.swift */,
+				C73C3ED11C1B599C0035B9C3 /* PlayersDataSource.swift */,
 				B056562C1C0A8A9000BAA19F /* Teams.swift */,
 				B08659FC1C157C5300E00B10 /* CosmosDistrib.swift */,
 				B05656071C09476C00BAA19F /* Assets.xcassets */,
@@ -111,6 +124,8 @@
 		B05656141C09476C00BAA19F /* Teams-UpTests */ = {
 			isa = PBXGroup;
 			children = (
+				C753C4E51C1B78BD001DD0CC /* FakeUserDefaults.swift */,
+				C73C3ED31C1B69560035B9C3 /* PlayersDataSourceTests.swift */,
 				B05656151C09476C00BAA19F /* Teams_UpTests.swift */,
 				B05656171C09476C00BAA19F /* Info.plist */,
 			);
@@ -161,6 +176,7 @@
 		B05655F51C09476C00BAA19F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0710;
 				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Jhoan Arango";
@@ -198,6 +214,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C775909E1C17128700126197 /* Podfile in Resources */,
 				B056566D1C11268400BAA19F /* PopupWindow.xib in Resources */,
 				B05656291C097F2500BAA19F /* Main.storyboard in Resources */,
 				B056560B1C09476C00BAA19F /* LaunchScreen.storyboard in Resources */,
@@ -223,6 +240,8 @@
 				B05656251C094D5100BAA19F /* PlayerTableViewCell.swift in Sources */,
 				B05656271C094E1700BAA19F /* TeamTableViewCell.swift in Sources */,
 				B08659FD1C157C5300E00B10 /* CosmosDistrib.swift in Sources */,
+				C73C3ED21C1B599C0035B9C3 /* PlayersDataSource.swift in Sources */,
+				C753C4E71C1B7F07001DD0CC /* FakeUserDefaults.swift in Sources */,
 				B05656011C09476C00BAA19F /* AppDelegate.swift in Sources */,
 				B05656211C0947DB00BAA19F /* MasterTableViewController.swift in Sources */,
 				B056562B1C0A8A4300BAA19F /* Player.swift in Sources */,
@@ -234,7 +253,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C753C4E61C1B78BD001DD0CC /* FakeUserDefaults.swift in Sources */,
 				B05656161C09476C00BAA19F /* Teams_UpTests.swift in Sources */,
+				C73C3ED51C1B697A0035B9C3 /* PlayersDataSource.swift in Sources */,
+				C78B030A1C1B842800F9AC93 /* Player.swift in Sources */,
+				C73C3ED41C1B69560035B9C3 /* PlayersDataSourceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,7 +319,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -334,7 +357,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -346,6 +369,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Teams-Up/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.NewDevelopersTeam.Teams-Up";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -357,6 +381,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Teams-Up/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.NewDevelopersTeam.Teams-Up";
 				PRODUCT_NAME = "$(TARGET_NAME)";
