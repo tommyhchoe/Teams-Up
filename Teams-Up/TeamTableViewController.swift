@@ -12,6 +12,7 @@ class TeamTableViewController: UITableViewController {
     
     var teams = [Teams]()
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,14 +21,11 @@ class TeamTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-       
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    
+    // MARK: Actions
+
 
     // MARK: - Table view data source
 
@@ -74,8 +72,9 @@ class TeamTableViewController: UITableViewController {
         imageView.frame = CGRectMake(footerView.center.x - 35, footerView.center.y, 70, 70)
         
         footerView.addSubview(imageView)
-        
+    
         return footerView
+        
     }
     
     override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

@@ -21,26 +21,14 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /// Setting the background image.
-        tableView.backgroundColor = UIColor.blackColor()
-        
-        /// Test players
-        
-        let player = Player(name: "Juan", rating: 3.0)
-        let player2 = Player(name: "Jhoan", rating: 5.0)
-        let player3 = Player(name: "Carlos", rating: 2.0)
-        let player4 = Player(name: "Mike", rating: 1.0)
-        let player5 = Player(name: "Mark", rating: 3.0)
-        let player6 = Player(name: "Frank", rating: 4.0)
-        
-        players += [player, player2, player3, player4, player5, player6]
-        
+
         /// Calling the method that loads the Nib
         xibSetup()
         popViewTextField.delegate = self
         
         /// Calling the method that updates the header.
         updateHeader()
+
     }
 
     // MARK: - Actions
@@ -56,7 +44,15 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     func updateHeader(){
-        headerLabel.text = "Players: \(players.count)"
+        if players.count == 0 {
+            headerLabel.alpha = 0
+            tableView.backgroundView = UIImageView(image: UIImage(named: "Background Empty"))
+        } else {
+            headerLabel.alpha = 1.0
+            headerLabel.text = "Players: \(players.count)"
+            tableView.backgroundView = nil
+            tableView.backgroundColor = UIColor.blackColor()
+        }
     }
 
     // MARK: - Table view data source
@@ -129,6 +125,12 @@ class MasterTableViewController: UITableViewController, UITextFieldDelegate {
 
         }
 
+    }
+    
+    /// Removes the teams created, so that it will not double the teams on the TeamsTableViewController
+    override func viewWillDisappear(animated: Bool) {
+        teamA.removeAll()
+        teamB.removeAll()
     }
 
     
