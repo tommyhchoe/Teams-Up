@@ -34,7 +34,16 @@ class PlayersViewController: UIViewController {
     }
     
     func updateHeader() {
-        headerLabel.text = "Players: \(playersDataSource.numberOfRows)"
+        // Changes the TableViews background when empty
+        if playersDataSource.numberOfRows == 0 {
+            headerLabel.alpha = 0
+            tableView.backgroundView = UIImageView(image: UIImage(named: "Background Empty"))
+        } else {
+            headerLabel.alpha = 1.0
+            tableView.backgroundView = nil
+            tableView.backgroundColor = UIColor.blackColor()
+            headerLabel.text = "Players: \(playersDataSource.numberOfRows)"
+        }
     }
 }
 
@@ -78,7 +87,6 @@ extension PlayersViewController: UITableViewDataSource {
     }
     
 }
-
 
 // MARK: TableView Delegate
 
