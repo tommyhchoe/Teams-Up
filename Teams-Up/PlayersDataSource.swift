@@ -98,6 +98,24 @@ struct PlayersDataSource {
         let player = Player(name: name, rating: rating)
         addPlayer(player)
     }
+    
+    /*!
+    Updates the player at the given index path
+    - parameter indexPath: tableView indexPath
+    - parameter player:    Updated player data
+    - returns: Player if updated successfully, otherwise nil
+    */
+    func updatePlayerAtIndexPath(indexPath: NSIndexPath, player: Player) -> Player? {
+        guard players.indices ~= indexPath.row else {
+            return nil
+        }
+        
+        var persistedPlayers = players
+        persistedPlayers[indexPath.row] = player
+        savePlayers(persistedPlayers)
+        
+        return player
+    }
 
     /*!
     Removes the player at the given index path
