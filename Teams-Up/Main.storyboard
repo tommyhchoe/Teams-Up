@@ -1,124 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9bB-4G-5Db">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9bB-4G-5Db">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="HelveticaNeueLights.ttc">
             <string>HelveticaNeue-Light</string>
+            <string>HelveticaNeue-Light</string>
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Players-->
-        <scene sceneID="BD1-mK-kxI">
-            <objects>
-                <tableViewController id="nt1-mU-lLH" customClass="MasterTableViewController" customModule="Teams_Up" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="tod-hg-bO4">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="separatorColor" red="0.076711381362912001" green="0.31067555759684734" blue="0.63933655104712039" alpha="1" colorSpace="calibratedRGB"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="xHV-To-Nvz">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Players: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1db-Nb-hxW">
-                                    <rect key="frame" x="8" y="5" width="584" height="55"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="584" id="ySw-lk-eiy"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="48"/>
-                                    <color key="textColor" red="0.70980392156862748" green="0.70980392156862748" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstItem="1db-Nb-hxW" firstAttribute="centerX" secondItem="xHV-To-Nvz" secondAttribute="centerX" id="TK1-wf-7b1"/>
-                                <constraint firstItem="1db-Nb-hxW" firstAttribute="centerY" secondItem="xHV-To-Nvz" secondAttribute="centerY" id="y8A-8r-vYV"/>
-                            </constraints>
-                        </view>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="player cell" id="wmB-SL-0jg" customClass="PlayerTableViewCell" customModule="Teams_Up" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="114.5" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wmB-SL-0jg" id="8dZ-QZ-KBD">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z6L-bm-qd1">
-                                            <rect key="frame" x="8" y="11" width="229" height="21"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kx5-HZ-Z1V" customClass="CosmosView" customModule="Teams_Up" customModuleProvider="target">
-                                            <rect key="frame" x="435" y="9" width="151" height="26"/>
-                                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="151" id="SLz-8L-bwD"/>
-                                                <constraint firstAttribute="height" constant="26" id="giS-iy-h5S"/>
-                                            </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="colorFilled">
-                                                    <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColorEmpty">
-                                                    <color key="value" red="0.36078431370000003" green="0.36078431370000003" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="starSize">
-                                                    <real key="value" value="25"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="rating">
-                                                    <real key="value" value="3"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidthEmpty">
-                                                    <real key="value" value="1"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </view>
-                                    </subviews>
-                                    <color key="backgroundColor" red="0.98947368421052628" green="0.97894736842105268" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Kx5-HZ-Z1V" secondAttribute="trailing" constant="6" id="FNG-VV-5qI"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="Kx5-HZ-Z1V" secondAttribute="bottom" constant="1" id="wxH-J5-HEY"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.050000000000000003" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <outlet property="playerNameLabel" destination="z6L-bm-qd1" id="z62-we-lfO"/>
-                                    <outlet property="starRating" destination="Kx5-HZ-Z1V" id="qgM-sf-Wxh"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="nt1-mU-lLH" id="NCC-7E-5aP"/>
-                            <outlet property="delegate" destination="nt1-mU-lLH" id="mOc-eR-dMH"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Players" id="rbp-gI-0qG">
-                        <barButtonItem key="leftBarButtonItem" title="Add" id="94O-8u-O3c">
-                            <connections>
-                                <action selector="addButton:" destination="nt1-mU-lLH" id="n5Z-eL-QXM"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Teams" id="KcI-UW-nGZ">
-                            <connections>
-                                <action selector="teamsButton:" destination="nt1-mU-lLH" id="L1i-Ax-u5P"/>
-                                <segue destination="Gcr-QV-s0g" kind="show" identifier="teams" id="YTQ-oM-rni"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="headerLabel" destination="1db-Nb-hxW" id="kk8-hW-rPK"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oAl-mS-nGs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="974" y="165"/>
-        </scene>
         <!--Teams-->
         <scene sceneID="noH-PK-rbj">
             <objects>
@@ -126,6 +19,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="2Yp-qZ-NOl">
                         <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="team cell" id="TUS-39-Bjh" customClass="TeamTableViewCell" customModule="Teams_Up" customModuleProvider="target">
@@ -137,6 +31,7 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Players Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XXf-dv-rXY">
                                             <rect key="frame" x="113" y="11" width="375" height="21"/>
+                                            <animations/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="375" id="haI-V7-1pH"/>
                                             </constraints>
@@ -145,12 +40,14 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <animations/>
                                     <constraints>
                                         <constraint firstItem="XXf-dv-rXY" firstAttribute="top" secondItem="LK1-i1-B3Q" secondAttribute="topMargin" constant="3" id="7Xg-g1-ci7"/>
                                         <constraint firstItem="XXf-dv-rXY" firstAttribute="centerY" secondItem="LK1-i1-B3Q" secondAttribute="centerY" id="LbL-3k-aj7"/>
                                         <constraint firstItem="XXf-dv-rXY" firstAttribute="centerX" secondItem="LK1-i1-B3Q" secondAttribute="centerX" id="Ri0-9M-D2t"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.050000000000000003" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="teamPlayerLabel" destination="XXf-dv-rXY" id="Fvp-qE-uvG"/>
@@ -168,6 +65,226 @@
             </objects>
             <point key="canvasLocation" x="1669" y="165"/>
         </scene>
+        <!--Players-->
+        <scene sceneID="Tbb-wX-Lda">
+            <objects>
+                <viewController id="Dwd-Bm-FRT" customClass="PlayersViewController" customModule="Teams_Up" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="afN-CK-ceH"/>
+                        <viewControllerLayoutGuide type="bottom" id="VUC-n1-7Dg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FuF-bK-9tk">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="bBK-uo-62b">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.076711381359999997" green="0.31067555759999999" blue="0.63933655099999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="5V2-oq-Fkn">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Players: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khv-BT-dqn">
+                                            <rect key="frame" x="8" y="5" width="584" height="55"/>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="584" id="Bi9-FZ-Xkj"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="48"/>
+                                            <color key="textColor" red="0.70980392160000005" green="0.70980392160000005" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="khv-BT-dqn" firstAttribute="centerX" secondItem="5V2-oq-Fkn" secondAttribute="centerX" id="N7d-V9-39p"/>
+                                        <constraint firstItem="khv-BT-dqn" firstAttribute="centerY" secondItem="5V2-oq-Fkn" secondAttribute="centerY" id="u8S-Ll-X8c"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="player cell" rowHeight="50" id="c12-Gx-2L1" customClass="PlayerTableViewCell" customModule="Teams_Up" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="114.5" width="600" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c12-Gx-2L1" id="vPt-Te-Kkv">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="62F-BC-h1Z" customClass="CosmosView" customModule="Teams_Up" customModuleProvider="target">
+                                                    <rect key="frame" x="444" y="12" width="151" height="26"/>
+                                                    <animations/>
+                                                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="26" id="A07-Fc-SZP"/>
+                                                        <constraint firstAttribute="width" constant="151" id="kyU-7G-JZc"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="colorFilled">
+                                                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColorEmpty">
+                                                            <color key="value" red="0.36078431370000003" green="0.36078431370000003" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                            <real key="value" value="25"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                            <real key="value" value="3"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidthEmpty">
+                                                            <real key="value" value="1"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sb3-iu-0BC">
+                                                    <rect key="frame" x="16" y="14" width="229" height="25"/>
+                                                    <animations/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="229" id="6Lq-bG-BmB"/>
+                                                        <constraint firstAttribute="height" constant="25" id="b3f-U8-hgM"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <color key="backgroundColor" red="0.98947368420000004" green="0.97894736839999996" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="62F-BC-h1Z" secondAttribute="trailing" constant="5" id="ANq-82-M0g"/>
+                                                <constraint firstItem="Sb3-iu-0BC" firstAttribute="centerY" secondItem="vPt-Te-Kkv" secondAttribute="centerY" constant="1.75" id="Jzb-Em-Tsc"/>
+                                                <constraint firstItem="62F-BC-h1Z" firstAttribute="centerY" secondItem="vPt-Te-Kkv" secondAttribute="centerY" id="Z4w-Jd-UBy"/>
+                                                <constraint firstItem="Sb3-iu-0BC" firstAttribute="leading" secondItem="vPt-Te-Kkv" secondAttribute="leading" constant="16" id="jou-Uf-A1W"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.050000000000000003" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="playerNameLabel" destination="Sb3-iu-0BC" id="EJi-zh-cAU"/>
+                                            <outlet property="starRating" destination="62F-BC-h1Z" id="BpF-6o-4hk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VUC-n1-7Dg" firstAttribute="top" secondItem="bBK-uo-62b" secondAttribute="bottom" id="Lcw-nm-deU"/>
+                            <constraint firstAttribute="trailing" secondItem="bBK-uo-62b" secondAttribute="trailing" id="eug-Iy-Oaa"/>
+                            <constraint firstItem="bBK-uo-62b" firstAttribute="leading" secondItem="FuF-bK-9tk" secondAttribute="leading" id="oXX-6f-s3B"/>
+                            <constraint firstItem="bBK-uo-62b" firstAttribute="top" secondItem="afN-CK-ceH" secondAttribute="bottom" id="yd4-ib-VWM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Players" id="y1k-on-Qaj">
+                        <barButtonItem key="leftBarButtonItem" title="Add" id="OwL-2e-PfS">
+                            <connections>
+                                <action selector="addPlayerTouched:" destination="Dwd-Bm-FRT" id="kly-8V-KeF"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Teams" id="iRD-lT-nAp">
+                            <connections>
+                                <segue destination="Gcr-QV-s0g" kind="show" identifier="teams" id="eQ9-qA-69J"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="headerLabel" destination="khv-BT-dqn" id="x48-nV-rTh"/>
+                        <outlet property="tableView" destination="bBK-uo-62b" id="Mbc-7H-p5A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9W9-ng-OCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="OFD-2t-rTo">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <animations/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="separatorColor" red="0.076711381359999997" green="0.31067555759999999" blue="0.63933655099999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <view key="tableHeaderView" contentMode="scaleToFill" id="aBg-oe-8f2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="65"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Players: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkC-jE-ayV">
+                                <rect key="frame" x="8" y="5" width="584" height="55"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="584" id="cZn-Ow-d3c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="48"/>
+                                <color key="textColor" red="0.70980392160000005" green="0.70980392160000005" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dkC-jE-ayV" firstAttribute="centerX" secondItem="aBg-oe-8f2" secondAttribute="centerX" id="4Gb-aX-faT"/>
+                            <constraint firstItem="dkC-jE-ayV" firstAttribute="centerY" secondItem="aBg-oe-8f2" secondAttribute="centerY" id="gsf-SV-Jcz"/>
+                        </constraints>
+                    </view>
+                    <prototypes>
+                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="player cell" id="Z7p-yr-dfd" customClass="PlayerTableViewCell" customModule="Teams_Up" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="115" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z7p-yr-dfd" id="wbx-P8-tiS">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfg-0O-ngb">
+                                        <rect key="frame" x="8" y="11" width="229" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ctM-eX-oAF" customClass="CosmosView" customModule="Teams_Up" customModuleProvider="target">
+                                        <rect key="frame" x="435" y="9" width="151" height="26"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="26" id="SMK-Va-jmE"/>
+                                            <constraint firstAttribute="width" constant="151" id="zAm-bl-9xM"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="colorFilled">
+                                                <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColorEmpty">
+                                                <color key="value" red="0.36078431370000003" green="0.36078431370000003" blue="0.36078431370000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                <real key="value" value="25"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                                <real key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidthEmpty">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.98947368420000004" green="0.97894736839999996" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="ctM-eX-oAF" secondAttribute="trailing" constant="6" id="ICy-JO-43d"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="ctM-eX-oAF" secondAttribute="bottom" constant="1" id="hDS-OK-PJo"/>
+                                </constraints>
+                            </tableViewCellContentView>
+                            <animations/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.050000000000000003" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <outlet property="playerNameLabel" destination="Zfg-0O-ngb" id="HEd-QU-3M4"/>
+                                <outlet property="starRating" destination="ctM-eX-oAF" id="ZNU-eK-4xb"/>
+                            </connections>
+                        </tableViewCell>
+                    </prototypes>
+                </tableView>
+            </objects>
+            <point key="canvasLocation" x="977" y="165"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="cNR-WJ-1kb">
             <objects>
@@ -176,6 +293,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Bcg-J6-ONp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <textAttributes key="titleTextAttributes">
@@ -184,7 +302,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="nt1-mU-lLH" kind="relationship" relationship="rootViewController" id="F0V-Vb-hfo"/>
+                        <segue destination="Dwd-Bm-FRT" kind="relationship" relationship="rootViewController" id="XUU-N6-xHN"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XiJ-68-YSD" userLabel="First Responder" sceneMemberID="firstResponder"/>

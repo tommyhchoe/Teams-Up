@@ -77,6 +77,27 @@ class PlayersDataSourceTests: XCTestCase {
         }
     }
     
+    func testThatPlayerIsUpdatedCorrectly() {
+        
+        // Player list should be empty when running this test
+        XCTAssertEqual(playersDataSource.numberOfRows, 0, "Players data source should be empty")
+        
+        playersDataSource.addPlayer(name: "TestnameOne", rating: 1.0)
+        let updatedPlayer = Player(name: "TestnameNew", rating: 2.0)
+        let indexPath = NSIndexPath(forRow: 0, inSection: 1)
+        playersDataSource.updatePlayerAtIndexPath(indexPath, player: updatedPlayer)
+        
+        XCTAssertEqual(playersDataSource.numberOfRows, 1, "Number of players does not match expected count")
+        
+        if let player = playersDataSource.playerAtIndexPath(indexPath) {
+            XCTAssertEqual(player.name, "TestnameNew", "Player name does not match expected player")
+            XCTAssertEqual(player.rating, 2.0, "Player rating does not match expected player")
+        } else {
+            XCTFail("Player was not updated correctly")
+        }
+        
+    }
+    
     func testThatPlayerIsRemovedCorrectly() {
         
         // Player list should be empty when running this test
