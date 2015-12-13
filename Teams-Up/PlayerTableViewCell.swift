@@ -8,13 +8,10 @@
 
 import UIKit
 
-protocol Test {
-    func test(cell: PlayerTableViewCell)
-}
+
 
 class PlayerTableViewCell: UITableViewCell {
     
-    var rating = 0
     
     // MARK: Properties & Outlets
 

@@ -88,7 +88,6 @@ extension PlayersViewController: UITableViewDataSource {
     
 }
 
-
 // MARK: TableView Delegate
 
 extension PlayersViewController: UITableViewDelegate {
