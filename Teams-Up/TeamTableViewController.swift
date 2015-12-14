@@ -39,9 +39,19 @@ class TeamTableViewController: UITableViewController {
         return players
     }
 
-    /// Title for the Section
+    // Code by tommyhchoe
+    /// Average team score displayed by string interpolation. This could use rework by using viewForHeading instead.
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "\(teams[section].team)"
+        let team = teams[section]
+        var counter = 0.0
+        let numOfPlayers = Double(team.player.count)
+        
+        for player in team.player{
+            counter += Double(player.rating)
+        }
+        
+        let avgTeamScore = round((counter / numOfPlayers) * 10) / 10
+        return "\(team.team) \n Avg Score: \(avgTeamScore)"
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
